@@ -6,13 +6,20 @@
 {% endblock %}
 
 {% block content %}
-{% if result %}
-<a href=""><p id="img-path">{{ img_path }}</p></a>
-<img src="" alt="">
-<h1>Пол: {{ gender }}</h1>
-{% else %}
-<p>Лицо не найдено</p>
-{% endif %}
+<div class="content container result pt-4">
+    {% if result %}
+    <img src="" alt="">
+    <input id="img-path" type="text" value="{{ img_path }}" style="display: none;">
+        {% if gender == 0 %}
+        <h2 class="mt-2">Женщина</h2>
+        {% else %}
+        <h2 class="mt-2">Мужчина</h2>
+        {% endif %}
+    {% else %}
+    <p>Лицо не найдено</p>
+    {% endif %}
+    <a class="mt-4 btn btn-success" href="{% url 'home' %}">На главную</a>
+</div>
 {% endblock %}
 
 {% block javascript %}
