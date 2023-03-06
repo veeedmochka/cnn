@@ -13,11 +13,9 @@ def home(request):
         if form.is_valid():
             form.save()
             return redirect(reverse('result', kwargs={'title': form.cleaned_data['title']}))
-        else:
-            print(form.errors)
     else:
         form = FileForm(initial={'title': generate_title()})
-        return render(request, 'predictor/home.html', {'form': form})
+    return render(request, 'predictor/home.html', {'form': form})
 
 
 def result(request, title):
@@ -27,4 +25,3 @@ def result(request, title):
         result = predict(title)
         context.update({'gender': result})
     return render(request, 'predictor/result.html', context)
-
