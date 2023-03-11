@@ -4,3 +4,4 @@ dataset/
 media/images/*
 media/faces/*
 !/media/faces/
+!/media/images/
