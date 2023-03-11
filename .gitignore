@@ -1,7 +1,5 @@
 venv/
 __pycache__/
 dataset/
-media/images/*
-media/faces/*
-!/media/faces/
-!/media/images/
+media/images/*.jpg
+media/faces/*.jpg
