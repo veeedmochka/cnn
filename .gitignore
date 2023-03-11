@@ -3,4 +3,4 @@ __pycache__/
 dataset/
 media/images/*
 media/faces/*
-!/media/faces/empty
+!/media/faces/
